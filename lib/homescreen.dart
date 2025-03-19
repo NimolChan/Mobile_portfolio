@@ -27,7 +27,13 @@ class Homescreen extends StatelessWidget {
       throw 'Could not launch $url';
     }
   }
-
+  Future<void> _launchUrl1() async {
+    final Uri url = Uri.parse(
+      "https://www.linkedin.com/in/kong-bopha/");
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw 'Could not launch $url';
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,9 +118,28 @@ class Homescreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-
-              // Resume Button
               ElevatedButton(
+                onPressed: _launchUrl1,  
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueAccent,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 25, vertical: 12),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  elevation: 5,
+                ),
+                child: Text(
+                  'Hire me',
+                  style: GoogleFonts.poppins(
+                    fontSize: 16,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+                ElevatedButton(
                 onPressed: _launchUrl,  
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blueAccent,
@@ -134,6 +159,7 @@ class Homescreen extends StatelessWidget {
                   ),
                 ),
               ),
+              // Resume Button
               
             ],
           ),
