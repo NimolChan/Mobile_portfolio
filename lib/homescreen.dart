@@ -21,7 +21,7 @@ class Homescreen extends StatelessWidget {
 
   Future<void> _launchUrl() async {
     final Uri url = Uri.parse(
-        "https://www.canva.com/design/DAGcniKQsFo/dP48iDbLsX7Y_XrqeAhDSA/edit?utm_content=DAGcniKQsFo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton");
+        "https://www.facebook.com/share/1CEXJ6U3Z6/?mibextid=wwXIfr");
 
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       throw 'Could not launch $url';
@@ -29,7 +29,7 @@ class Homescreen extends StatelessWidget {
   }
   Future<void> _launchUrl1() async {
     final Uri url = Uri.parse(
-      "https://www.linkedin.com/in/kong-bopha/");
+      "https://www.linkedin.com/in/nimol-chan/");
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       throw 'Could not launch $url';
     }
@@ -70,7 +70,7 @@ class Homescreen extends StatelessWidget {
                 ),
                 child: ClipOval(
                   child: Image.asset(
-                    'assets/images/bopha.jpg',
+                    'assets/images/nimol.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -79,7 +79,7 @@ class Homescreen extends StatelessWidget {
 
               // Name & Role
               Text(
-                'Kong Bopha',
+                'Chan Nimol',
                 style: GoogleFonts.poppins(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -88,7 +88,7 @@ class Homescreen extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               Text(
-                'Position: Mobile Developer',
+                'Position: Newtwork Security',
                 style: GoogleFonts.poppins(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
@@ -99,7 +99,7 @@ class Homescreen extends StatelessWidget {
 
               // Bio / Description
               Text(
-                'A passionate mobile developer specializing in creating user-friendly and efficient mobile applications.',
+                'An passionate about network security, ensuring secure communication and protecting systems from cyber threats. Their interest extends to securing backend infrastructures, implementing encryption methods, and understanding vulnerabilities to enhance overall system security..',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                   fontSize: 14,
